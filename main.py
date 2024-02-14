@@ -1,8 +1,6 @@
 from Library import *
 from helpers import *
 
-
-
 library_list = []
 
 with open("library_list.txt", "a+") as library_list_source:
