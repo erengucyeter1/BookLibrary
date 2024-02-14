@@ -1,11 +1,12 @@
 ﻿# BookLibrary
 
-###Current Library:
- The library you are currently using appears here in real-time.
+### Current Library:
+The library you are currently using appears here in real-time.
     
-### 1- List Your Books
+### 1- List Your Books:
+You can see here your currently librarys books.
     
-    2- Add A New Book
+### 2- Add A New Book
     3- Delete A Book
     
     4- Show Libraries
