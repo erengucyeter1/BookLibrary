@@ -11,7 +11,7 @@ class BookLibrary:
         self.name = name
         self.book_list = []
         self.source = source
-        with open(source, "a+") as file:  # r
+        with open(source, "a+") as file:
             file.seek(0)
             data = file.read().splitlines()
 
@@ -24,11 +24,13 @@ class BookLibrary:
         if len(self.book_list) == 0:
             print("\nYou do not have any book yet!\n")
             return
-
+        i = 0
         for book in self.book_list:
+
             print(
-                f"Name: {book.name}, Author: {book.author}, Realese date: {book.realese}, Page: {book.page}\n"
+                f"{i}: Name: {book.name}, Author: {book.author}, Realese date: {book.realese}, Page: {book.page}\n"
             )
+            i = i + 1
 
     def is_book_duplicate(self, newBook):
 
@@ -70,7 +72,7 @@ class BookLibrary:
             for book in self.book_list:
                 file.write(self.convert_book_to_string(book))
 
-    def add_book(self, info):  # info bir txt ve sonradan parçalanmalı
+    def add_book(self, info):
         book = info.split(",")
 
         if self.is_book_duplicate(book):
@@ -78,5 +80,5 @@ class BookLibrary:
         else:
             self.book_list.append(Book(book))
 
-            with open("books.txt", "a") as file:
+            with open(self.source, "a") as file:
                 file.write(info + "\n")
